@@ -61,8 +61,7 @@ function montarPergunta() {
         <section class="alternativas">
             <form action="">
                 <label for="alternativa_a">
-                    <input type="radio" id="alternativa_a" name="alternativa" value="${alterarSinais(quiz.questions[pergunta - 1].options[0])}
-">
+                    <input type="radio" id="alternativa_a" name="alternativa" value="${alterarSinais(quiz.questions[pergunta - 1].options[0])}">
 
                     <div>
                         <span>A</span>
@@ -119,7 +118,6 @@ function validarResposta() {
     const botaoEnviar = document.querySelector(".alternativas button")
     botaoEnviar.innerText = "Próxima"
     botaoEnviar.removeEventListener("click", validarResposta)
-    botaoEnviar.addEventListener("click", proximaPergunta)
 
     if (pergunta === 10) {
         botaoEnviar.innerText = "Finalizar"
